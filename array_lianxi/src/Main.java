@@ -119,12 +119,67 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        int[][] arr1={
+                {1,2,3},
+                {2,3,4},
+                {3,4,5}
+        };
+        int[][] arr2=new int[3][5];
+        arr2[2][3]=2;
+        arr2[2]=new int[]{3,4,5};
+        int[][] arr3=new int[][]{
+            {1},
+            {2,3},
+            {3,4,5}
+        };
+        for (int i = 0; i < arr1.length; i++) {
+                System.out.println(Arrays.toString(arr1[i]));
+            }
+        for(int[] n:arr1){
+            for(int m:n){
+                System.out.print(m+" ");
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = 0; j < arr1[i].length; j++) {
+                System.out.print(arr1[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+    public static void main11(String[] args) {
+        int [] arr=new int[10];
+        Arrays.fill(arr,10);
+        System.out.println(Arrays.toString(arr));
+        //也可以选择部分填充
+        Arrays.fill(arr,2,4,6);
+        //下标2-3填充为6
+        System.out.println(Arrays.toString(arr));
+    }
+    public static void main10(String[] args) {
+        int[] arr={1,2,3,4,5,6,7,8,9,10};
+        int ret = Arrays.binarySearch(arr,5);
+        System.out.println(ret);
+    }
+    public static void main9(String[] args) {
+        int arr[]={1,2,3,4,5,6};
+        int arr2[]=Arrays.copyOf(arr,arr.length);
+        System.out.println(Arrays.toString(arr2));
+    }
+    public static void main8(String[] args) {
         int[] arr1={2,6,4,1};
         int[] arr2={1,2,34,3,4,5,7,23,12};
         System.out.println(lianxuji(arr1));
         System.out.println(lianxuji(arr2));
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.println(arr1[i]);
+        }
+        for(int x:arr1){
+            System.out.println(x);
+        }
+        System.out.println(Arrays.toString(arr1));
     }
-
     public static void main7(String[] args) {
         int[] arr1={3,2,3};
         int[] arr2={2,2,1,1,1,2,2};
@@ -188,4 +243,5 @@ public class Main {
         transform(arr);
         System.out.println(Arrays.toString(arr));
     }
+
 }
