@@ -1,0 +1,21 @@
+package demo;
+
+class Sub extends Base {
+
+    private int z;
+
+    public Sub(int x, int y, int z) {
+        //write your code here
+        super(x,y);
+        this.z=z;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public int calculate() {
+        return super.getX() * super.getY() * this.getZ();
+    }
+
+}
