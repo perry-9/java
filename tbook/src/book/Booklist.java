@@ -18,7 +18,11 @@ public class Booklist {
         return books[pos];
     }
 
-    public void setBooks(int pos,Book book) {
+    public Book[] getBooks() {
+        return books;
+    }
+
+    public void setBooks(int pos, Book book) {
         this.books[pos] = book;
     }
 
